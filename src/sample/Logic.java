@@ -35,6 +35,16 @@ public class Logic {
         this.board[x][y] = 0;
     }
 
+    public void setState(int x, int y, int state){
+        if(x < 0 || x >= width){
+            return;
+        }
+        if (y < 0 || y >= height){
+            return;
+        }
+        this.board[x][y] = state;
+    }
+
     public int aliveNeighbours(int x, int y){
         int count = 0;
 
@@ -88,27 +98,5 @@ public void runSim(){
     }
     this.board = newBoard;
 }
-
-    public static void main(String[] args) {
-        Logic logic = new Logic(8,5);
-
-        logic.Alive(2,2);
-        logic.Alive(3,2);
-        logic.Alive(4,2);
-
-        logic.makeBoard();
-
-        logic.runSim();
-
-        logic.makeBoard();
-
-        logic.runSim();
-
-        logic.makeBoard();
-
-        logic.runSim();
-
-    }
-
 
 }
