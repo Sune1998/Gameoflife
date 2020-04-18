@@ -1,4 +1,4 @@
-package sample;
+package Gameoflife;
 
 import javafx.geometry.Point2D;
 import javafx.scene.control.Button;

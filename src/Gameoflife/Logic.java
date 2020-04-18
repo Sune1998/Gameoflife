@@ -1,4 +1,4 @@
-package sample;
+package Gameoflife;
 
 public class Logic {
     int width;
